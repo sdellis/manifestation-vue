@@ -1,7 +1,7 @@
 {
   "name": "manifestation-vue",
   "description": "Vue component toolkit and Manifesto mixins for IIIF-aware user interfaces.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": {
     "name": "Shaun Ellis",
     "email": "shaun@sdellis.com"
