@@ -1,15 +1,18 @@
 import Tree from './components/Tree.vue'
 import Thumbnails from './components/Thumbnails.vue'
+import mixins from './mixins/manifesto-vue-mixins'
 
 // Install the components
 export function install (Vue) {
   Vue.component('tree', Tree)
   Vue.component('thumbnails', Thumbnails)
+  Vue.component('mixins', mixins)
   /* -- Add more components here -- */
 }
 
 // Expose the components
 export {
+  mixins,
   Tree,
   Thumbnails,
   /* -- Add more components here -- */
