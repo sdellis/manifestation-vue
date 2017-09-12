@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'thumbnails',
-  props: ['thumbnails']
+  props: ['thumbnails'],
 }
 </script>
 
