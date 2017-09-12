@@ -1,0 +1,41 @@
+
+body {
+  font-family: Menlo, Consolas, monospace;
+  color: #444;
+}
+.item {
+  cursor: pointer;
+}
+.bold {
+  font-weight: bold;
+}
+ul {
+  padding-left: 1em;
+  line-height: 1.5em;
+  list-style-type: dot;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+.cell img {
+  display: block;
+}
+.cell {
+  margin: 1rem;
+}
+@media screen and (min-width: 600px) {
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.cell {
+    width: calc(50% - 2rem);
+}
+}
+@media screen and (min-width: 1000px) {
+.cell {
+    width: calc(33.3333% - 2rem);
+}
+}
