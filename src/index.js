@@ -1,9 +1,11 @@
+import Title from './components/Title.vue'
 import Tree from './components/Tree.vue'
 import Thumbnails from './components/Thumbnails.vue'
 import mixins from './mixins/manifesto-vue-mixins'
 
 // Install the components
 export function install (Vue) {
+  Vue.component('title', Title)
   Vue.component('tree', Tree)
   Vue.component('thumbnails', Thumbnails)
   Vue.component('mixins', mixins)
@@ -12,6 +14,7 @@ export function install (Vue) {
 
 // Expose the components
 export {
+  Title,
   mixins,
   Tree,
   Thumbnails,
