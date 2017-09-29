@@ -1,6 +1,7 @@
 <template>
   <ul id="demo">
     <item
+      @itemSelected="handleSelect"
       class="item"
       :model="toc">
     </item>
@@ -14,6 +15,13 @@ export default {
   name: 'tree',
   components: { Item },
   props: ['toc'],
+  methods: {
+    handleSelect: function (argument) {
+      console.log('tree:')
+      console.log(argument)
+      this.$emit('select', argument)
+    },
+  },
 }
 </script>
 

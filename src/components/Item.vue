@@ -2,12 +2,13 @@
   <li>
     <div
       :class="{bold: isFolder}"
-      @click="toggle">
+      @click="toggle(model)">
       {{model.name}}
       <span v-if="isFolder">[{{open ? '-' : '+'}}]</span>
     </div>
     <ul v-show="open" v-if="isFolder">
       <item
+        @click="toggle(model)"
         class="item"
         v-for="model in model.children"
         :key="model.id"
@@ -38,10 +39,13 @@ export default {
     },
   },
   methods: {
-    toggle: function () {
+    toggle: function (argument) {
       if (this.isFolder) {
         this.open = !this.open
       }
+      console.log('item:')
+      console.log(argument)
+      this.$emit('itemSelected', argument)
     },
   },
 }
